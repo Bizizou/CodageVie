@@ -1,19 +1,22 @@
 #include <iostream>
 #include <math.h>
+
+using namespace std; //Evite de repeter le fameux std::
+
 int main()
 {
-	int Xa, Xb, Ya, Yb ;
-	int distance;
-	std::cout << "Entrez la valeur du x du premier point : ";
-	std::cin >> Xa ;
-	std::cout << "Entrez la valeur du y du premier point : ";
-	std::cin >> Ya;
-	std::cout << "Entrez la valeur du x du deuxieme point : ";
-	std::cin >> Xb;
-	std::cout << "Entrez la valeur du y du deuxieme point : ";
-	std::cin >> Yb;
-	distance = sqrt((Xb - Xa) ^ 2 + (Yb - Ya) ^ 2);
-	std::cout << "la distance de ces deux points sont de : " << distance;
+	float Xa, Xb, Ya, Yb ; //déclaration des variables (x, y) de chaque point
+	float distance; //formule qui va permettre de calculer la distance des deux points
+	cout << "Entrez la valeur du x du premier point : ";
+	cin >> Xa ; //assignation de la valeur 
+	cout << "Entrez la valeur du y du premier point : ";
+	cin >> Ya; //assignation de la valeur 
+	cout << "Entrez la valeur du x du deuxieme point : ";
+	cin >> Xb; //assignation de la valeur 
+	cout << "Entrez la valeur du y du deuxieme point : ";
+	cin >> Yb; //assignation de la valeur 
+	distance = sqrt(pow(Xb - Xa, 2) + pow(Yb - Ya, 2)); //Formule mathematique pour calculer la distance
+	cout << "la distance de ces deux points sont de : " << distance;
 
 
 	return 0;
